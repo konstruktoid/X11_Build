@@ -16,5 +16,7 @@ $ docker run -d -t -p 3389:3389 -t x11
 
 Default account below, container could use volumes for host accounts. Connect with a RDP client.  
 
-Username: rdpuser  
-Password: HayaoMiyazaki  
+Username: `rdpuser`  
+Password: `HayaoMiyazaki` 
+
+![](https://raw.githubusercontent.com/konstruktoid/X11_Build/master/coreos-X11.png)
