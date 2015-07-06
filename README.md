@@ -24,9 +24,9 @@ $ docker run -d -t -p 3389:3389 -t x11
 Running container X11 applications requires `--privileged` and that you install `Docker` itself.  
 
 ```sh
-# docker run -d -t --privileged -p 3389:3389 -t x11
+$ docker run -d -t --privileged -p 3389:3389 -t x11
 $ docker exec -ti x11_CONTAINER_ID sh
-# apt-get install curl ca-certificates --no-install-recommends
+# apt-get update && apt-get -y install curl ca-certificates --no-install-recommends
 # curl -sSL https://get.docker.com/ | sh
 # usermod -aG docker totoro
 ```
