@@ -2,7 +2,7 @@
 
 FROM konstruktoid/debian:wheezy
 
-ENV UN rdpuser
+ENV UN totoro
 ENV PW HayaoMiyazaki
 
 COPY files/runRDP.sh /runRDP.sh
