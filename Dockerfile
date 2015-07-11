@@ -10,7 +10,8 @@ COPY files/runRDP.sh /runRDP.sh
 RUN \
     apt-get update && \
     apt-get -y upgrade && \
-    apt-get -y install fluxbox eterm xrdp xterm && \
+    apt-get -y install eterm fluxbox vnc4server xfonts-base \
+      xrdp xterm --no-install-recommends && \
     apt-get -y clean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/* \
