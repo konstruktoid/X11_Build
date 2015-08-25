@@ -1,5 +1,3 @@
-# Force autobuild 1439929945
-
 FROM konstruktoid/debian:wheezy
 
 ENV UN totoro
