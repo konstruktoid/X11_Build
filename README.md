@@ -1,7 +1,13 @@
 # X11 with fluxbox and xrdp
-A `X11` container with `fluxbox` and `xrdp`.  
+A `X11` container with `fluxbox` and `xrdp`.
 
 ### Tested on
+```sh
+Distributor ID: Ubuntu
+Description:    Ubuntu 16.04.2 LTS
+Release:        16.04
+Codename:       xenial
+```
 ```sh
 Distributor ID: Ubuntu
 Description:  Ubuntu 14.04.2 LTS
@@ -32,7 +38,7 @@ $ docker exec -ti x11_CONTAINER_ID sh
 ```
 
 ### Default account
-Connect with a RDP client.  
+Connect with a RDP client.
 
 Username: `totoro`  
 Password: `HayaoMiyazaki`  

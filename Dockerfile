@@ -24,7 +24,6 @@ RUN \
     chown -R $UN:$UN /home/$UN/.fluxbox/ && \
     mkdir -p /usr/share/doc/xrdp/ && \
     service xrdp start && \
-    service xrdp stop && \
-    rm /var/run/xrdp/*.pid
+    service xrdp stop
 
 CMD ["/runRDP.sh"]
