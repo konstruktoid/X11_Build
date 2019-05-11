@@ -1,9 +1,7 @@
-FROM konstruktoid/debian:wheezy
+FROM konstruktoid/debian:stretch
 
 ENV UN totoro
 ENV PW HayaoMiyazaki
-
-COPY files/runRDP.sh /runRDP.sh
 
 RUN \
     apt-get update && \
@@ -13,9 +11,7 @@ RUN \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* \
       /usr/share/doc /usr/share/doc-base \
-      /usr/share/man /usr/share/locale /usr/share/zoneinfo
-
-RUN \
+      /usr/share/man /usr/share/locale /usr/share/zoneinfo && \
     useradd -m  --user-group --shell /bin/sh $UN && \
     echo "$UN:$PW" | chpasswd && \
     echo "startfluxbox" > /home/$UN/.xsession && \
@@ -25,5 +21,10 @@ RUN \
     mkdir -p /usr/share/doc/xrdp/ && \
     service xrdp start && \
     service xrdp stop
+
+COPY files/xrdp.ini /etc/xrdp/xrdp.ini
+COPY files/runRDP.sh /runRDP.sh
+
+EXPOSE 3389
 
 CMD ["/runRDP.sh"]
