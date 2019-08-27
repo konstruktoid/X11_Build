@@ -1,4 +1,4 @@
-FROM konstruktoid/debian:stretch
+FROM konstruktoid/debian:buster
 
 ENV UN totoro
 ENV PW HayaoMiyazaki
